@@ -8,7 +8,7 @@ try {
   log.warning("axios-retry not found");
 }
 
-class StartHelper {
+export default class StartHelper {
   /**
    * @param {number | boolean} logLevel
    * @returns {void}
@@ -56,5 +56,3 @@ class StartHelper {
     log.debug("Axios retry initialized");
   }
 }
-
-export default StartHelper;
