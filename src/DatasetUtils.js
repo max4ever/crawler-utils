@@ -1,7 +1,7 @@
 import { Actor, Dataset } from 'apify';
 import log from '@apify/log';
 
-class DatataSetUtils {
+export default class DatasetUtils {
     /** @param {string} datasetName */
     static async getEmptyDataset(datasetName) {
         let datasetOut = await Actor.openDataset(datasetName);
@@ -72,5 +72,3 @@ class DatataSetUtils {
         } while (rows.items.length > 0);
     }
 }
-
-export default DatataSetUtils;
