@@ -1,0 +1,21 @@
+{
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "avoid",
+    "printWidth": 130,
+    "tabWidth": 4,
+    "useTabs": false,
+    "proseWrap": "preserve",
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "semi": true,
+    "htmlWhitespaceSensitivity": "css",
+    "endOfLine": "lf",
+    "quoteProps": "as-needed",
+    "insertPragma": false,
+    "requirePragma": false,
+    "embeddedLanguageFormatting": "auto",
+    "plugins": [
+        "prettier-plugin-jsdoc"
+    ]
+}
