@@ -1,6 +1,7 @@
 import { Actor, Dataset } from 'apify';
 import log from '@apify/log';
 
+/** @deprecated We stop using datasets */
 export default class DatasetUtils {
     /** @param {string} datasetName */
     static async getEmptyDataset(datasetName) {
