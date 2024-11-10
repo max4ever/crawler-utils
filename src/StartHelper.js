@@ -1,12 +1,4 @@
 import log from '@apify/log';
-import axios from 'axios';
-
-let optionalAxiosRetry;
-try {
-    optionalAxiosRetry = require('axios-retry');
-} catch (e) {
-    log.warning('axios-retry not found');
-}
 
 export default class StartHelper {
     /**
@@ -35,24 +27,5 @@ export default class StartHelper {
             }
         }
         log.debug('---------');
-    }
-
-    /**
-     * @param {number} nrOfRetries
-     * @returns {void}
-     */
-    static initAxios(nrOfRetries = 30) {
-        if (!optionalAxiosRetry) {
-            log.warning('axios-retry not found');
-            return;
-        }
-        optionalAxiosRetry(axios, {
-            retries: nrOfRetries,
-            retryDelay: retryCount => {
-                log.error(`Retry attempt: ${retryCount}`);
-                return retryCount * 2000; // time interval between retries
-            },
-        });
-        log.debug('Axios retry initialized');
     }
 }
