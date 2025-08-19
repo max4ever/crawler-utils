@@ -20,7 +20,7 @@ export default class StartHelper {
      * @returns {void}
      */
     static logInput(input) {
-        log.debug('Input: ----');
+        log.debug('Input used:');
         for (const key in input) {
             if (input.hasOwnProperty(key)) {
                 log.debug(`${key} = ${JSON.stringify(input[key], null, 2)}`);
